@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relatório: Lei de Hooke</title>
+<link rel="stylesheet" href="../../assets/css/tema.css">
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/componentes.css">
+<link rel="stylesheet" href="../../assets/css/aluno.css">
+</head>
+<body>
+<main id="app"></main>
+
+<!-- Conteúdo das questões deste relatório. O resto da tela (acesso, fotos, envio) é montado por assets/js/relatorio/shell.js -->
+<template id="conteudo">
+  <section>
+    <details><summary>Resumo do experimento</summary>
+    <p><b>Teoria.</b> Para uma mola, F = K · Δx no regime elástico, sendo F a força elástica, K a constante elástica da mola e Δx a deformação da mola.</p>
+    <p><b>Objetivo.</b> Obter o valor da constante elástica da mola (K).</p>
+    <p><b>Materiais.</b> Mola; suporte para a mola; corpos com massas diferentes; suporte para as massas; dinamômetro ou balança digital; régua ou paquímetro.</p>
+    <p><b>Procedimento.</b> Coloque as massas no suporte e obtenha a força peso que atua nos corpos (use o dinamômetro ou a balança para obter a massa e faça o produto com a aceleração gravitacional). Coloque a mola pendurada em um suporte e meça o prolongamento da mola usando a régua/paquímetro para cada um dos corpos.</p>
+    </details>
+  </section>
+  <section>
+    <h2>Questão 1</h2>
+    <p>A partir dos conceitos que envolvem o experimento da Lei de Hooke, desenvolva as questões de (a) a (c).</p>
+    <p><b>a) Liste</b> na tabela abaixo os instrumentos de medida utilizados com as devidas informações.</p>
+    <div data-t="ins"></div>
+    <p><b>b)</b> Para o experimento da Lei de Hooke, <b>registre</b> nas tabelas abaixo os dados solicitados com o número correto de algarismos significativos.</p>
+    <div data-t="x0"></div>
+    <div class="note"><b>Dica:</b> lembre-se que Δx = x − x<sub>0</sub> e x<sub>0</sub> é o comprimento natural da mola.</div>
+    <div data-t="hooke"></div>
+    <p><b>c) Descreva</b> se em algum momento na execução do experimento foi realizada alguma operação que não estava prevista no roteiro.</p>
+    <textarea data-k="1c) Operações não previstas" style="min-height:130px"></textarea>
+  </section>
+  <section>
+    <h2>Questão 2</h2>
+    <p>Nos dados obtidos na questão (1b), existe algum que está muito diferente dos demais? Em caso afirmativo, descarte este dado a partir desta etapa do relatório. <b>Discuta</b> qual a origem do dado diferente no experimento.</p>
+    <textarea data-k="2) Dado discrepante" style="min-height:130px"></textarea>
+  </section>
+  <section>
+    <h2>Questão 3</h2>
+    <p><b>a) Aplique</b> a equação (K = P/Δx) para obter os valores de K.</p>
+    <div class="note"><b>Dica:</b> os valores do peso e Δx médio estão na questão (1b).</div>
+    <div data-t="ke"></div>
+    <p><b>b) Utilize</b> as equações abaixo para obter os valores de K médio e desvio padrão.</p>
+    <div class="eq"><math display="block"><mrow><mover><msub><mi>K</mi><mi>e</mi></msub><mo>¯</mo></mover><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mfrac><mrow><msubsup><mi>K</mi><mi>e</mi><mi>i</mi></msubsup></mrow><mrow><mi>N</mi></mrow></mfrac></mrow></math><math display="block"><mrow><mi>Δ</mi><msub><mi>K</mi><mi>e</mi></msub><mo>=</mo><msqrt><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mfrac><msup><mrow><mo>(</mo><msubsup><mi>K</mi><mi>e</mi><mi>i</mi></msubsup><mo>−</mo><mover><msub><mi>K</mi><mi>e</mi></msub><mo>¯</mo></mover><mo>)</mo></mrow><mn>2</mn></msup><mi>N</mi></mfrac></msqrt></mrow></math><math display="block"><mrow><msub><mi>K</mi><mi>e</mi></msub><mo>=</mo><mover><msub><mi>K</mi><mi>e</mi></msub><mo>¯</mo></mover><mo>±</mo><mi>Δ</mi><msub><mi>K</mi><mi>e</mi></msub></mrow></math></div>
+    <div data-t="kest"></div>
+  </section>
+  <section>
+    <h2>Questão 4</h2>
+    <p>A partir dos dados obtidos na questão (3a), <b>construa</b>, usando papel milimetrado, um gráfico (P × ΔX).</p>
+    <div class="note"><b>Atenção:</b> anexe uma foto do gráfico ao final do arquivo (no campo de fotos, no fim da página).</div>
+    <p><b>a) Aplique</b> o método gráfico para obter o valor do coeficiente angular.</p>
+    <div class="note"><b>Dica:</b> sendo <math><mrow><mi>y</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi></mrow></math>, onde <math><mrow><mi>a</mi><mo>=</mo><mfrac><mrow><mi>Δ</mi><mi>y</mi></mrow><mrow><mi>Δ</mi><mi>x</mi></mrow></mfrac></mrow></math> é o coeficiente angular.</div>
+    <div data-t="coefa"></div>
+    <textarea data-k="4a) Método gráfico: coeficiente angular" style="min-height:90px"></textarea>
+    <p><b>b) Aplique</b> o método gráfico para obter o valor do coeficiente linear.</p>
+    <div class="note">Sendo <math><mrow><mi>y</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi></mrow></math>, onde b é o coeficiente linear.</div>
+    <div data-t="coefb"></div>
+    <textarea data-k="4b) Método gráfico: coeficiente linear" style="min-height:90px"></textarea>
+  </section>
+  <section>
+    <h2>Questão 5</h2>
+    <p><b>Analise</b> o significado do coeficiente angular e do coeficiente linear. A qual grandeza eles correspondem?</p>
+    <textarea data-k="5) Significado dos coeficientes" style="min-height:130px"></textarea>
+  </section>
+  <section>
+    <h2>Questão 6</h2>
+    <p><b>Compare</b> usando a diferença percentual os valores de K médio e K obtido pelo método gráfico discutindo se essa diferença é aceitável para uma prática experimental.</p>
+    <div class="eq"><math display="block"><mrow><mi>D</mi><mo>=</mo><mrow><mo>(</mo><mfrac><mrow><mtext>valor maior</mtext><mo>−</mo><mtext>valor menor</mtext></mrow><mrow><mtext>valor maior</mtext></mrow></mfrac><mo>)</mo></mrow><mo>⋅</mo><mn>100</mn></mrow></math></div>
+    <div data-t="dif"></div>
+    <textarea data-k="6) Discussão da diferença percentual" style="min-height:130px"></textarea>
+  </section>
+  <section>
+    <h2>Questão 7</h2>
+    <p><b>Julgue</b> se o experimento executado é de fato um método eficaz de obter o valor da constante elástica da mola. <b>Justifique</b> a sua resposta com base nos dados obtidos experimentalmente.</p>
+    <textarea data-k="7) Julgamento do método" style="min-height:200px"></textarea>
+  </section>
+  <section>
+    <h2>Questão 8</h2>
+    <p>Os valores obtidos experimentalmente para a constante elástica da mola possuem fontes de erro. <b>Proponha</b> um experimento autoral (novo) que lhe permita minimizar essas fontes de erro ou um novo procedimento de medida que possa minimizar os erros do experimento já proposto.</p>
+    <div class="note">Sejam criativos, discutam entre si. Essa questão é aberta e sem resposta correta. Utilizem os conhecimentos físicos que vocês têm. A ideia é estimular uma nova visão experimental e buscar e discutir novas ideias a serem possivelmente implementadas. Tentem propor um experimento em que sejam obtidos valores mais próximos do esperado.</div>
+    <textarea data-k="8) Proposta de experimento autoral" style="min-height:220px"></textarea>
+  </section>
+  
+</template>
+
+<script src="../../assets/js/config.js"></script>
+<script src="../../assets/js/core/util.js"></script>
+<script src="../../assets/js/core/api.js"></script>
+<script src="definicao.js"></script>
+<script src="../../assets/js/relatorio/shell.js"></script>
+<script src="../../assets/js/relatorio/engine.js"></script>
+<script src="../../assets/js/relatorio/acesso.js"></script>
+<script src="../../assets/js/relatorio/main.js"></script>
+</body>
+</html>

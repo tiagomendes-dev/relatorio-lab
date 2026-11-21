@@ -1,0 +1,10 @@
+{
+  "name": "sistema-laboratorio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Relatórios de laboratório: envio por perfil, avaliação por questão e acompanhamento.",
+  "scripts": {
+    "build": "python3 scripts/build_backend.py",
+    "test": "node tests/run.js"
+  }
+}

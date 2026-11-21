@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relatório: queda livre</title>
+<link rel="stylesheet" href="../../assets/css/tema.css">
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/componentes.css">
+<link rel="stylesheet" href="../../assets/css/aluno.css">
+</head>
+<body>
+<main id="app"></main>
+
+<!-- Conteúdo das questões deste relatório. O resto da tela (acesso, fotos, envio) é montado por assets/js/relatorio/shell.js -->
+<template id="conteudo">
+  <section>
+    <details><summary>Resumo do experimento</summary>
+    <p><b>Teoria.</b> Sabemos que <math><mrow><mi>Y</mi><mo>=</mo><mfrac><mrow><mi>g</mi><msup><mi>t</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>, sendo Y a altura de queda da esfera, g a aceleração gravitacional e t o tempo de queda.</p>
+    <p><b>Objetivo.</b> Obter o valor da aceleração da gravidade local (g).</p>
+    <p><b>Materiais.</b> 1 corpo de prova esférico; régua; 5 sensores fotoelétricos; cronômetro digital.</p>
+    <p><b>Procedimento.</b> Com a régua, meça a altura do lançamento do corpo de prova e a altura de cada um dos 5 sensores. Solte o corpo de prova em queda livre. Com o auxílio dos sensores fotoelétricos e do cronômetro digital, meça diferentes tempos de queda para sensores em posições diferentes.</p>
+    <p class="hint"><b>Observação:</b> caso não tenha acesso aos sensores fotoelétricos associados ao cronômetro digital, filme o experimento e utilize um programa de análise de vídeo, por exemplo o Tracker (sugestão: coloque uma trena atrás da trajetória da esfera e pause o vídeo em diferentes momentos da queda para obter os dados).</p>
+    </details>
+  </section>
+  <section>
+    <h2>Questão 1</h2>
+    <p>A partir dos conceitos que envolvem o experimento de queda livre, desenvolva as questões de (a) a (c).</p>
+    <p><b>a) Liste</b> na tabela abaixo os instrumentos de medida utilizados com as informações sobre o mesmo.</p>
+    <div data-t="ins"></div>
+    <p><b>b)</b> Para o experimento de queda livre, <b>registre</b> nas tabelas abaixo os dados solicitados com o número correto de algarismos significativos.</p>
+    <div data-t="queda"></div>
+    <p><b>c) Descreva</b> se em algum momento foi realizada alguma operação que não estava prevista no roteiro do experimento.</p>
+    <textarea data-k="1c) Operações não previstas" style="min-height:130px"></textarea>
+  </section>
+  <section>
+    <h2>Questão 2</h2>
+    <p>Nos dados obtidos na questão (1b), existe algum que está muito diferente dos demais? Em caso afirmativo, descarte este dado a partir desta etapa do relatório. <b>Discuta</b> qual a origem do dado diferente no experimento.</p>
+    <textarea data-k="2) Dado discrepante" style="min-height:130px"></textarea>
+  </section>
+  <section>
+    <h2>Questão 3</h2>
+    <p><b>a) Aplique</b> os dados da questão (1b) para obter os dados da tabela a seguir.</p>
+    <div data-t="y3"></div>
+    <p><b>b) Utilize</b> os dados da questão (3a) para fazer um gráfico (Y × t²) no papel milimetrado.</p>
+    <div class="note"><b>Atenção:</b> anexe uma foto do gráfico ao final do arquivo (no campo de fotos, no fim da página).</div>
+    <p><b>c) Aplique</b> o método gráfico para obter o coeficiente angular da reta (m).</p>
+    <div data-t="coefm"></div>
+    <textarea data-k="3c) Método gráfico: coeficiente angular" style="min-height:90px"></textarea>
+    <p><b>d) Aplique</b> <math><mrow><mi>m</mi><mo>=</mo><mfrac><mrow><mi>g</mi></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math>, para obter a aceleração gravitacional (g).</p>
+    <div class="note"><b>Dica:</b> o valor de m foi obtido na questão (3c).</div>
+    <div data-t="gg"></div>
+  </section>
+  <section>
+    <h2>Questão 4</h2>
+    <p><b>a) Aplique</b> o método dos mínimos quadrados (MMQ) para os dados obtidos na questão (3a).</p>
+    <div class="note"><b>Dica:</b> as equações para m e n são:</div>
+    <div class="eq"><math display="block"><mrow><mi>m</mi><mo>=</mo><mfrac><mrow><mi>N</mi><mo>⋅</mo><mo>∑</mo><mrow><mo>(</mo><msup><mrow><mi>Δ</mi><mi>t</mi></mrow><mn>2</mn></msup><mo>⋅</mo><mrow><mi>Δ</mi><mi>Y</mi></mrow><mo>)</mo></mrow><mo>−</mo><mo>∑</mo><msup><mrow><mi>Δ</mi><mi>t</mi></mrow><mn>2</mn></msup><mo>⋅</mo><mo>∑</mo><mrow><mi>Δ</mi><mi>Y</mi></mrow></mrow><mrow><mi>N</mi><mo>∑</mo><msup><mrow><mo>(</mo><msup><mrow><mi>Δ</mi><mi>t</mi></mrow><mn>2</mn></msup><mo>)</mo></mrow><mn>2</mn></msup><mo>−</mo><msup><mrow><mo>(</mo><mo>∑</mo><msup><mrow><mi>Δ</mi><mi>t</mi></mrow><mn>2</mn></msup><mo>)</mo></mrow><mn>2</mn></msup></mrow></mfrac></mrow></math><math display="block"><mrow><mi>n</mi><mo>=</mo><mfrac><mrow><mo>∑</mo><msup><mrow><mo>(</mo><msup><mrow><mi>Δ</mi><mi>t</mi></mrow><mn>2</mn></msup><mo>)</mo></mrow><mn>2</mn></msup><mo>⋅</mo><mo>∑</mo><mrow><mi>Δ</mi><mi>Y</mi></mrow><mo>−</mo><mo>∑</mo><msup><mrow><mi>Δ</mi><mi>t</mi></mrow><mn>2</mn></msup><mo>⋅</mo><mo>∑</mo><mrow><mo>(</mo><msup><mrow><mi>Δ</mi><mi>t</mi></mrow><mn>2</mn></msup><mo>⋅</mo><mrow><mi>Δ</mi><mi>Y</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>N</mi><mo>∑</mo><msup><mrow><mo>(</mo><msup><mrow><mi>Δ</mi><mi>t</mi></mrow><mn>2</mn></msup><mo>)</mo></mrow><mn>2</mn></msup><mo>−</mo><msup><mrow><mo>(</mo><mo>∑</mo><msup><mrow><mi>Δ</mi><mi>t</mi></mrow><mn>2</mn></msup><mo>)</mo></mrow><mn>2</mn></msup></mrow></mfrac></mrow></math></div>
+    <div data-t="mmq"></div>
+    <div data-t="soma"></div>
+    <div data-t="mmqr"></div>
+    <p><b>b) Analise</b> o significado de m e do valor de n para obter o valor da aceleração da gravidade pelo método do gráfico.</p>
+    <div data-t="gmmq"></div>
+    <textarea data-k="4b) Significado de m e n" style="min-height:100px"></textarea>
+  </section>
+  <section>
+    <h2>Questão 5</h2>
+    <p><b>a) Compare</b>, usando a diferença percentual, o valor obtido para a aceleração da gravidade na questão (3d) com o valor teórico esperado, discutindo se essa diferença é aceitável para uma prática experimental.</p>
+    <div class="note">Considere o valor teórico g<sub>T</sub> = 9,79 m/s² *</div>
+    <div class="eq"><math display="block"><mrow><mi>D</mi><mo>=</mo><mrow><mo>(</mo><mfrac><mrow><msub><mi>g</mi><mi>T</mi></msub><mo>−</mo><msub><mi>g</mi><mi>E</mi></msub></mrow><mrow><msub><mi>g</mi><mi>T</mi></msub></mrow></mfrac><mo>)</mo></mrow><mo>⋅</mo><mn>100</mn></mrow></math></div>
+    <div data-t="d5a"></div>
+    <textarea data-k="5a) Discussão (método gráfico)" style="min-height:100px"></textarea>
+    <p><b>b) Compare</b>, usando a diferença percentual, o valor obtido para a aceleração da gravidade na questão (4b) com o valor teórico esperado, discutindo se essa diferença é aceitável para uma prática experimental.</p>
+    <div class="note">Considere o valor teórico g<sub>T</sub> = 9,79 m/s² *</div>
+    <div class="eq"><math display="block"><mrow><mi>D</mi><mo>=</mo><mrow><mo>(</mo><mfrac><mrow><msub><mi>g</mi><mi>T</mi></msub><mo>−</mo><msub><mi>g</mi><mi>E</mi></msub></mrow><mrow><msub><mi>g</mi><mi>T</mi></msub></mrow></mfrac><mo>)</mo></mrow><mo>⋅</mo><mn>100</mn></mrow></math></div>
+    <div data-t="d5b"></div>
+    <textarea data-k="5b) Discussão (MMQ)" style="min-height:100px"></textarea>
+    <p class="hint">*Fonte: Base de Dados Gravimétricos do Observatório Nacional, para a aceleração da gravidade em Juiz de Fora. Acesso em: 08 abr 2021.</p>
+  </section>
+  <section>
+    <h2>Questão 6</h2>
+    <p><b>Compare</b> os valores da aceleração da gravidade obtido por meio dos dois métodos (método gráfico e método dos mínimos quadrados) e <b>julgue</b> qual método é mais eficaz para obter o valor da aceleração da gravidade.</p>
+    <textarea data-k="6) Comparação dos métodos" style="min-height:130px"></textarea>
+  </section>
+  <section>
+    <h2>Questão 7</h2>
+    <p><b>Julgue</b> se o experimento executado é de fato um método eficaz de obter o valor da aceleração da gravidade local. <b>Justifique</b> a sua resposta com base nos dados obtidos experimentalmente.</p>
+    <textarea data-k="7) Julgamento do método" style="min-height:200px"></textarea>
+  </section>
+  <section>
+    <h2>Questão 8</h2>
+    <p>Os valores obtidos experimentalmente para a aceleração da gravidade possuem fontes de erro. <b>Proponha</b> um experimento autoral (novo) que lhe permita minimizar essas fontes de erro ou um novo procedimento de medida que possa minimizar os erros do experimento já proposto.</p>
+    <div class="note">Sejam criativos, discutam entre si. Essa questão é aberta e sem resposta correta. Utilizem os conhecimentos físicos que vocês têm. A ideia é estimular uma nova visão experimental e buscar e discutir novas ideias a serem possivelmente implementadas. Tentem propor um experimento em que sejam obtidos valores mais próximos do esperado.</div>
+    <textarea data-k="8) Proposta de experimento autoral" style="min-height:220px"></textarea>
+  </section>
+  
+</template>
+
+<script src="../../assets/js/config.js"></script>
+<script src="../../assets/js/core/util.js"></script>
+<script src="../../assets/js/core/api.js"></script>
+<script src="definicao.js"></script>
+<script src="../../assets/js/relatorio/shell.js"></script>
+<script src="../../assets/js/relatorio/engine.js"></script>
+<script src="../../assets/js/relatorio/acesso.js"></script>
+<script src="../../assets/js/relatorio/main.js"></script>
+</body>
+</html>

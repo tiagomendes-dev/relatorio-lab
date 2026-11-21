@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meus relatórios</title>
+<link rel="stylesheet" href="../assets/css/tema.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/componentes.css">
+<link rel="stylesheet" href="../assets/css/aluno.css">
+</head>
+<body>
+<main>
+  <h1>Meus relatórios</h1>
+  <p class="sub">Entre com o código de acesso do seu perfil para ver o que já foi enviado, o que falta enviar e as notas de cada questão.</p>
+  <section id="entrada">
+    <label for="cod" style="margin-top:0">Código de acesso</label>
+    <input id="cod" autocomplete="off" maxlength="12" style="max-width:240px;text-transform:uppercase">
+    <p><button type="button" id="ver">Entrar</button></p>
+    <div class="err" id="erro" role="alert"></div>
+  </section>
+  <div id="res"></div>
+</main>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/core/util.js"></script>
+<script src="../assets/js/core/api.js"></script>
+<script src="../assets/js/portal/portal.js"></script>
+</body>
+</html>

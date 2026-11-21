@@ -1,0 +1,15 @@
+/* COMPONENTES reutilizáveis: avisos, equações, selos e tabelas. */
+.note{background:var(--aviso);border:1px solid var(--borda);padding:5px 8px;margin:8px 0;font-size:13px}
+.eq{background:var(--branco);border:1px solid var(--borda);padding:4px 10px;margin:8px 0;overflow-x:auto}
+.badge{display:inline-block;border:1px solid var(--borda);background:var(--alerta);padding:0 5px;font:12px var(--fonte-ui);white-space:nowrap}
+.badge.ok{background:var(--ok)}
+.tw,.grid-wrap{overflow-x:auto;margin:6px 0}
+table{border-collapse:collapse;width:100%}
+.grid{min-width:520px;background:var(--branco)}
+.grid th,.grid td{border:1px solid var(--borda);padding:0;text-align:center}
+.grid th{background:var(--destaque);color:var(--destaque-texto);font:bold 12px var(--fonte-ui);padding:5px}
+.grid td.n{background:var(--destaque);color:var(--destaque-texto);font:bold 12px var(--fonte-ui);padding:4px;width:34px}
+.grid td.fx{background:#e0e0e0;font:bold 13px var(--fonte-ui);padding:4px;white-space:nowrap}
+.grid td.l{text-align:left;padding:4px 6px}
+.grid input{width:100%;min-width:90px;border:0;background:var(--branco);text-align:center;padding:5px}
+body.auto input[data-ty="d"],body.auto input[data-ty="m"]{background:var(--aviso)}

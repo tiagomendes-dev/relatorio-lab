@@ -1,0 +1,33 @@
+/* CSS específico do painel do professor (somado a tema.css, base.css e componentes.css no build). */
+main{max-width:1040px;margin:0 auto;padding:10px;background:var(--janela);border-left:3px solid #fff;border-right:3px solid #404040;min-height:100vh}
+.card{background:var(--superficie);border:2px outset #fff;padding:8px 10px;margin-bottom:10px}
+.topo{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.topo h1{margin:0}
+.filtros{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0;align-items:center}.filtros input{flex:1;min-width:150px}
+.grupo h3{margin:10px 0 4px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px}
+.cardt{background:#e0e0e0;border:2px outset #fff;padding:6px 8px;text-align:left;font:13px var(--fonte-ui);display:block;width:100%}
+.cardt.on{background:var(--aviso);border-style:inset}
+.cardt.zero{color:#666}
+.cardt b{display:block}
+.bar{height:10px;background:#fff;border:1px solid var(--borda);margin:5px 0 3px}.bar i{display:block;height:100%;background:var(--destaque)}
+.lista{background:#fff}
+.lista th{background:var(--destaque);color:var(--destaque-texto);font:bold 12px var(--fonte-ui);text-align:left;padding:5px}
+.lista td{border:1px solid var(--borda-suave);padding:5px;text-align:left}
+.lista tbody tr{cursor:pointer}.lista tbody tr:hover{background:var(--aviso)}
+.grid{min-width:380px;margin-bottom:4px}
+.grid td{padding:4px 8px}
+.resp{white-space:pre-wrap;background:#fff;border:1px solid var(--borda);padding:6px 10px}
+.fotos{display:flex;gap:10px;flex-wrap:wrap}
+figure{margin:0;flex:1;min-width:240px}figure img{width:100%;border:1px solid var(--borda)}
+.ph{background:#fff;border:1px dashed var(--borda-suave);padding:30px 10px;text-align:center;color:#555}
+.ih{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline;border-bottom:1px solid var(--borda-suave);padding-bottom:4px;margin-bottom:6px}
+.ih h3{margin:0}
+.aval{background:#d4d0c8;border:1px solid var(--borda-suave);padding:8px;margin-top:10px;display:grid;gap:6px}
+.aval .l1{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.pt{width:80px;text-align:center;font-weight:bold}.pt.bad{border-color:var(--erro);background:var(--erro-fundo)}
+.nav{display:flex;justify-content:space-between;gap:8px;margin:0 0 10px;flex-wrap:wrap}
+.barra{position:sticky;bottom:0;background:var(--janela);border:2px outset #fff;padding:6px 10px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.barra .tot{font:bold 15px var(--fonte-ui);margin-right:auto}
+.cod{font-family:var(--fonte-codigo);font-weight:bold}
+.mem{display:flex;gap:6px;margin-bottom:6px;flex-wrap:wrap}.mem input{flex:1;min-width:150px}

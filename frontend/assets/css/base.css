@@ -1,0 +1,23 @@
+/* BASE: reset, tipografia, formulários e botões. */
+*{box-sizing:border-box;border-radius:0}
+body{margin:0;background:var(--fundo);color:var(--texto);font:15px/1.4 var(--fonte-texto)}
+h1{margin:0 0 8px;padding:5px 8px;background:var(--destaque);color:var(--destaque-texto);font:bold 20px var(--fonte-ui)}
+h2{margin:0 0 8px;padding:2px 6px;background:var(--barra);color:#fff;font:bold 15px var(--fonte-ui)}
+h3,h4{margin:12px 0 6px;font:bold 14px var(--fonte-ui)}
+a{color:#0000ee}
+p{margin:10px 0 6px}
+label{display:block;font:bold 13px var(--fonte-ui);margin:10px 0 3px}
+input,select,textarea{font:13px var(--fonte-ui);color:var(--texto);background:var(--branco);border:2px inset #fff;padding:3px 5px}
+textarea{width:100%;min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--destaque)}
+button,a.btn{font:bold 13px var(--fonte-ui);color:var(--texto);background:var(--janela);border:2px outset #fff;padding:4px 14px;cursor:pointer;text-decoration:none;display:inline-block}
+button:active,a.btn:active{border-style:inset}
+button:disabled{color:var(--borda-suave);cursor:default}
+button.mini{padding:1px 8px;font-size:12px}
+.muted,.hint,.sub{color:var(--texto-suave);font-size:13px}
+.sub{margin:6px 0 10px}
+.err{color:var(--erro);font-weight:bold;min-height:1.3em;margin:6px 0}
+sub,sup{line-height:0}
+math{font-size:1.2em}
+summary{cursor:pointer;font-weight:bold}
+[hidden]{display:none!important}

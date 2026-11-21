@@ -1,0 +1,22 @@
+/* TEMA: único lugar com cores e fontes. Trocar o visual do sistema = editar só este arquivo. */
+:root{
+  --fundo:#008080;          /* fundo da página */
+  --janela:#c0c0c0;         /* "janela" central */
+  --superficie:#e8e8e8;     /* caixas e seções */
+  --branco:#ffffff;
+  --destaque:#000080;       /* barras de título e cabeçalhos de tabela */
+  --destaque-texto:#ffffff;
+  --barra:#808080;          /* títulos de seção */
+  --texto:#000000;
+  --texto-suave:#333333;
+  --borda:#000000;
+  --borda-suave:#808080;
+  --aviso:#ffffcc;
+  --alerta:#ffff99;
+  --ok:#99ff99;
+  --erro:#cc0000;
+  --erro-fundo:#ffdddd;
+  --fonte-texto:"Times New Roman",Times,serif;
+  --fonte-ui:Arial,Helvetica,sans-serif;
+  --fonte-codigo:"Courier New",Courier,monospace;
+}

@@ -1,0 +1,9 @@
+/* LAYOUT das telas do aluno (relatórios e "Meus relatórios"). */
+main{max-width:860px;margin:0 auto;padding:10px;background:var(--janela);border-left:3px solid #fff;border-right:3px solid #404040;min-height:100vh}
+section{background:var(--superficie);border:2px outset #fff;padding:8px 10px;margin:0 0 10px}
+section>p:first-of-type{margin-top:0}
+/* antes de entrar com o código, só o título e o acesso aparecem */
+body:not(.logado) #form > :not(h1):not(.sub):not(#acesso){display:none}
+#ok{display:none;text-align:center;padding:30px 10px}
+.rh{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
+.big{font:bold 28px var(--fonte-ui);margin:6px 0}

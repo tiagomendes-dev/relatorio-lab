@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relatório: prensa hidráulica</title>
+<link rel="stylesheet" href="../../assets/css/tema.css">
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/componentes.css">
+<link rel="stylesheet" href="../../assets/css/aluno.css">
+</head>
+<body>
+<main id="app"></main>
+
+<!-- Conteúdo das questões deste relatório. O resto da tela (acesso, fotos, envio) é montado por assets/js/relatorio/shell.js -->
+<template id="conteudo">
+  <section>
+    <h2>Questão 1</h2>
+    <p>Com base nos conceitos previamente adquiridos e nos dados obtidos experimentalmente, desenvolva as questões de (a) a (d).</p>
+    <p><b>a) Liste</b> na tabela abaixo os instrumentos de medida utilizados com as informações sobre o mesmo.</p>
+    <div data-t="ins"></div>
+    <p><b>b)</b> Para o experimento estático (Lei de Hooke), <b>registre</b> na tabela abaixo os dados solicitados com o número correto de algarismos significativos.</p>
+    <div data-t="hooke"></div>
+    <p><b>c)</b> Para o experimento realizado com base no sistema da prensa hidráulica, <b>registre</b> na tabela abaixo os dados solicitados com o número correto de algarismos significativos.</p>
+    <div class="note"><b>Atenção:</b> ao medir o diâmetro da seringa, medir a parte de dentro da seringa.</div>
+    <div data-t="diam"></div>
+    <div class="note"><b>Atenção:</b> serão utilizadas duas molas em que será obtido a deformação de cada uma delas na seringa 02.</div>
+    <div data-t="mola"></div>
+    <p><b>d) Descreva</b> se em algum momento foi realizada alguma operação que não estava prevista no roteiro do experimento.</p>
+    <textarea data-k="1d) Operações não previstas"></textarea>
+  </section>
+
+  <section>
+    <h2>Questão 2</h2>
+    <p>Nos dados obtidos na questão 1, existe algum que está muito diferente dos demais? Em caso afirmativo, descarte este dado a partir deste ponto do relatório. <b>Discuta</b> qual a origem do dado diferente no experimento.</p>
+    <textarea data-k="2) Dado discrepante"></textarea>
+  </section>
+
+  <section>
+    <h2>Questão 3</h2>
+    <p><b>a) Aplique</b> a equação (K<sub>e</sub> = P/ΔX<sub>m</sub>) para obter os valores de K<sub>e</sub>.</p>
+    <div data-t="ke"></div>
+    <p><b>b) Utilize</b> as equações abaixo para obter os valores de K médio e desvio padrão.</p>
+    <div class="eq" data-eq="e"></div>
+    <div data-t="kest"></div>
+    <p><b>c) Aplique</b> a equação (A<sub>b</sub> = πR²) para obter os valores da área da base das seringas.</p>
+    <div data-t="area"></div>
+    <p><b>d)</b> A partir da pressão indicada no manômetro e do valor médio da área da base das seringas, <b>aplique</b> a equação (F<sub>1</sub> = P<sub>1</sub> × A<sub>1</sub>) para obter as forças aplicadas na seringa 01.</p>
+    <div data-t="f1"></div>
+    <p><b>e)</b> Após encontrar o valor da força 1, <b>aplique</b> a equação (F<sub>2</sub> = (F<sub>1</sub> × A<sub>2</sub>) / A<sub>1</sub>) e obtenha as forças resultantes na seringa 02, em decorrência da aplicação do princípio de Pascal.</p>
+    <div data-t="f2"></div>
+    <p><b>f) Aplique</b> a equação (K<sub>2</sub> = F<sub>k2</sub>/ΔX<sub>m</sub>) para obter o deslocamento de cada mola instalada na seringa 02 (ΔX), os valores de K<sub>2</sub>.</p>
+    <div class="note"><b>Atenção:</b> o valor da Força 2 encontrada na etapa anterior é referente às duas molas, logo devemos anotar o valor da força da mola sendo igual a F<sub>k2</sub> = F<sub>2</sub>/2. Desta forma torna-se possível identificar a força elástica de cada mola. Lembre que 1 kgf = 9,81 N.</div>
+    <div data-t="k2"></div>
+    <p><b>g) Manipule</b> a equação abaixo para obter o valor médio de K<sub>2</sub> e o desvio padrão correspondente.</p>
+    <div class="eq" data-eq="2"></div>
+    <div data-t="k2st"></div>
+  </section>
+
+  <section>
+    <h2>Questão 4</h2>
+    <p><b>Compare</b> usando a diferença percentual os valores de K<sub>e</sub> e K<sub>2</sub>. Discutindo se essa diferença é aceitável para uma prática experimental.</p>
+    <div class="eq"><math display="block"><mrow><mi>D</mi><mo>=</mo><mrow><mo>(</mo><mfrac><mrow><mtext>Valor maior</mtext><mo>−</mo><mtext>Valor menor</mtext></mrow><mtext>Valor maior</mtext></mfrac><mo>)</mo></mrow><mo>×</mo><mn>100</mn></mrow></math></div>
+    <div data-t="dif"></div>
+    <textarea data-k="4) Discussão da diferença percentual"></textarea>
+  </section>
+
+  <section>
+    <h2>Questão 5</h2>
+    <p>A partir do comportamento da mola no experimento da prensa hidráulica: <b>avalie</b> se o valor da constante elástica da mola encontrado está de acordo com o valor de referência obtido por meio do experimento de Lei de Hooke.</p>
+    <textarea data-k="5) Avaliação da constante elástica"></textarea>
+  </section>
+
+  <section>
+    <h2>Questão 6</h2>
+    <p><b>Julgue</b> se o experimento de prensa hidráulica executado, é de fato um método eficaz de obter o valor da constante elástica da mola. <b>Justifique</b> a sua resposta com base nos dados obtidos experimentalmente.</p>
+    <textarea data-k="6) Julgamento do método"></textarea>
+  </section>
+
+  <section>
+    <h2>Questão 7</h2>
+    <p>O valor obtido experimentalmente para a constante elástica da mola possui fontes de erro. <b>Proponha</b> um experimento autoral (novo) que lhe permita minimizar essas fontes de erro ou um novo procedimento que possa minimizar os erros do experimento.</p>
+    <div class="note">Sejam criativos, discutam entre si. Essa questão é aberta e sem resposta correta. Utilizem os conhecimentos físicos que vocês têm. A ideia é estimular uma nova visão experimental e buscar e discutir novas ideias. Tentem propor um experimento em que sejam obtidos valores mais próximos do esperado.</div>
+    <textarea data-k="7) Proposta de experimento autoral" style="min-height:220px"></textarea>
+  </section>
+
+  
+</template>
+
+<script src="../../assets/js/config.js"></script>
+<script src="../../assets/js/core/util.js"></script>
+<script src="../../assets/js/core/api.js"></script>
+<script src="definicao.js"></script>
+<script src="../../assets/js/relatorio/shell.js"></script>
+<script src="../../assets/js/relatorio/engine.js"></script>
+<script src="../../assets/js/relatorio/acesso.js"></script>
+<script src="../../assets/js/relatorio/main.js"></script>
+</body>
+</html>

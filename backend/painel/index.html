@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<base target="_top">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Painel do professor</title>
+<style>
+/*{{CSS}}*/
+</style>
+</head>
+<body>
+<main>
+  <div id="login" class="card" style="max-width:420px;margin:60px auto">
+    <h1>Painel do professor</h1>
+    <p class="muted" id="dica">Digite a senha para ver os relatórios.</p>
+    <p class="muted">Versão {{VERSAO}}</p>
+    <input type="password" id="senha" placeholder="Senha" style="width:100%;margin-bottom:10px">
+    <button id="entrar">Entrar</button>
+    <div class="err" id="lerro" role="alert"></div>
+  </div>
+
+  <div id="cab" class="topo" hidden><h1>Painel do professor</h1><span><button id="tabR">Relatórios</button> <button class="sec" id="tabA">Acompanhamento</button> <button class="sec" id="tabC">Cadastro de alunos</button> <button class="sec" id="atualizar">Atualizar</button></span></div>
+  <div id="lista" hidden>
+    <div id="grupos"></div>
+    <div class="filtros">
+      <select id="fexp" aria-label="Experimento"></select>
+      <select id="fturma" aria-label="Turma"></select>
+      <select id="fstatus" aria-label="Situação"><option value="">Todas as situações</option><option value="p">Sem avaliação</option><option value="a">Avaliados</option><option value="o">Avaliados, não liberados</option><option value="l">Liberados ao aluno</option><option value="h">Histórico (envios substituídos)</option></select>
+      <input id="busca" placeholder="Buscar por nome do aluno">
+    </div>
+    <div class="topo"><span class="muted" id="conta"></span><button class="sec" id="liberarTodos">Liberar avaliados desta lista</button></div>
+    <div class="card tw" style="padding:6px">
+      <table class="lista"><thead><tr><th>Enviado em</th><th>Experimento</th><th>Turma</th><th>Integrantes</th><th>Avaliação</th><th>Aluno vê</th></tr></thead><tbody id="corpo"></tbody></table>
+      <p class="muted" id="vazio" style="padding:12px" hidden>Nenhum relatório encontrado.</p>
+    </div>
+  </div>
+
+  <div id="acomp" hidden>
+    <div class="filtros" style="margin-top:0"><select id="aexp" aria-label="Experimento"></select><select id="aturma" aria-label="Turma"></select>
+      <select id="asit" aria-label="Situação"><option value="">Todas as situações</option><option value="n">Não enviaram</option><option value="e">Enviaram</option></select></div>
+    <p class="muted" id="aresumo"></p>
+    <div class="card tw" style="padding:6px">
+      <table class="lista"><thead><tr><th>Turma</th><th>Perfil</th><th>Integrantes</th><th>Situação</th><th></th></tr></thead><tbody id="acorpo"></tbody></table>
+      <p class="muted" id="avazio" style="padding:12px" hidden></p>
+    </div>
+    <div class="card"><h3 style="margin-top:0">Quem ainda não enviou este relatório</h3><textarea id="apend" readonly style="min-height:90px"></textarea></div>
+  </div>
+
+  <div id="cadastro" hidden>
+    <div class="card">
+      <h2>Novo perfil</h2>
+      <p class="muted">Um perfil é um aluno (individual) ou um grupo de até 5. Ele recebe um código de acesso para enviar os relatórios.</p>
+      <div class="filtros" style="margin-top:0"><input id="cturma" list="dturmas" placeholder="Turma (ex.: 1º A)"><datalist id="dturmas"></datalist><input id="cnome" placeholder="Nome do grupo (opcional)"></div>
+      <div id="cmembros"></div>
+      <p><button class="sec" id="cadd">Adicionar integrante</button> <button id="ccriar">Cadastrar perfil</button> <span class="muted" id="cmsg"></span></p>
+    </div>
+    <div class="card">
+      <h2>Cadastrar vários alunos individuais</h2>
+      <p class="muted">Use a turma do campo acima. Um aluno por linha, no formato <b>Nome;Matrícula</b> (dá para colar de uma planilha).</p>
+      <textarea id="clote" placeholder="Ana Souza;20261001&#10;Bruno Lima;20261002"></textarea>
+      <p><button id="cloteBtn">Cadastrar lote</button> <span class="muted" id="clmsg"></span></p>
+    </div>
+    <div class="filtros"><select id="cfturma" aria-label="Turma"></select><input id="cbusca" placeholder="Buscar perfil ou aluno"></div>
+    <div class="card tw" style="padding:6px">
+      <table class="lista"><thead><tr><th>Código</th><th>Turma</th><th>Perfil</th><th>Integrantes</th><th>Relatórios enviados</th><th></th></tr></thead><tbody id="cperfis"></tbody></table>
+      <p class="muted" id="cvazio" style="padding:12px" hidden>Nenhum perfil cadastrado.</p>
+    </div>
+    <div class="card"><h3 style="margin-top:0">Lista para distribuir (nome e código)</h3><textarea id="ccopia" readonly style="min-height:110px"></textarea></div>
+  </div>
+
+  <div id="detalhe" hidden></div>
+</main>
+
+<script>
+/*{{JS}}*/
+</script>
+</body>
+</html>

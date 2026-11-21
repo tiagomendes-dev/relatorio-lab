@@ -1,0 +1,7 @@
+estado.js
+login.js
+relatorios.js
+avaliacao.js
+navegacao.js
+cadastro.js
+acompanhamento.js

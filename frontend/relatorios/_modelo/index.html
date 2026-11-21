@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relatório: modelo</title>
+<link rel="stylesheet" href="../../assets/css/tema.css">
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/componentes.css">
+<link rel="stylesheet" href="../../assets/css/aluno.css">
+</head>
+<body>
+<main id="app"></main>
+
+<!-- Escreva aqui as questões. Títulos de tabela e rótulos data-k começam com o número da questão: "1b) ...", "2) ..." -->
+<template id="conteudo">
+  <section>
+    <h2>Questão 1</h2>
+    <p><b>a) Liste</b> os instrumentos de medida utilizados.</p>
+    <div data-t="ins"></div>
+    <p><b>b) Registre</b> as medidas na tabela abaixo.</p>
+    <div data-t="medidas"></div>
+    <p><b>c) Descreva</b> o procedimento realizado.</p>
+    <textarea data-k="1c) Procedimento"></textarea>
+  </section>
+  <section>
+    <h2>Questão 2</h2>
+    <p><b>Discuta</b> os resultados obtidos.</p>
+    <textarea data-k="2) Discussão"></textarea>
+  </section>
+</template>
+
+<script src="../../assets/js/config.js"></script>
+<script src="../../assets/js/core/util.js"></script>
+<script src="../../assets/js/core/api.js"></script>
+<script src="definicao.js"></script>
+<script src="../../assets/js/relatorio/shell.js"></script>
+<script src="../../assets/js/relatorio/engine.js"></script>
+<script src="../../assets/js/relatorio/acesso.js"></script>
+<script src="../../assets/js/relatorio/main.js"></script>
+</body>
+</html>
